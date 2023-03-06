@@ -1,0 +1,17 @@
+1. src/main/deploy/swerve/modules/physicalproperties.json:
+     ramp rate -- minimum seconds to go full power, motor controller failsafe
+
+2. src/main/deploy/swerve/controllerproperties.json:
+     angle joystick deadband and pid loop for angular position control (d accomodates for finger slips, may need to be halved)
+
+3. src/main/deploy/swerve/modules/pidfproperties.json:
+     drivetrain pid values, pretty consistent across sds implementations afaik 
+
+4. src/main/deploy/swerve/swervedrive.json:
+     sets max speed (angular velocity max is calculated based off of this and wheelbase) and voltage setpoint
+
+4. \src\main\java\frc\robot\Robot.java:
+     m_robotContainer.setSlewRates() -- sets slew rates in max change of meters/rads per second, should be large numbers, may be redundant with ramp rate
+
+5. src\main\java\frc\robot\Constants.java:
+     joystick deadbands, auton pid values, chassis mass for anti tip algo (need to check if this is implemented)

@@ -1,42 +1,71 @@
 {
+  "HALProvider": {
+    "Other Devices": {
+      "CANCoder[5]": {
+        "header": {
+          "open": true
+        }
+      },
+      "CANCoder[8]": {
+        "header": {
+          "open": true
+        }
+      },
+      "CANCoder[9]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Pigeon 2[13]": {
+        "header": {
+          "open": true
+        }
+      },
+      "SPARK MAX [10]": {
+        "header": {
+          "open": true
+        }
+      },
+      "SPARK MAX [16]": {
+        "header": {
+          "open": true
+        }
+      },
+      "SPARK MAX [18]": {
+        "header": {
+          "open": true
+        }
+      },
+      "SPARK MAX [3]": {
+        "header": {
+          "open": true
+        }
+      }
+    }
+  },
   "NTProvider": {
     "types": {
       "/FMSInfo": "FMSInfo",
-      "/LiveWindow/SwerveSubsystem": "Subsystem",
-      "/LiveWindow/Ungrouped/PIDController[1]": "PIDController",
-      "/LiveWindow/Ungrouped/Pigeon 2 [13]": "Gyro",
-      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
       "/SmartDashboard/Field": "Field2d",
-      "/SmartDashboard/Pigeon 2 [13]": "Gyro",
-      "/SmartDashboard/SendableChooser[0]": "String Chooser",
-      "/SmartDashboard/navX-Sensor[1]": "Gyro"
+      "/SmartDashboard/Pigeon 2 [13]": "Gyro"
     },
     "windows": {
       "/SmartDashboard/Field": {
-        "XModules": {
-          "arrowColor": [
-            0.09611687064170837,
-            0.17414122819900513,
-            0.9803921580314636,
-            255.0
-          ],
-          "arrowSize": 33,
-          "arrowWeight": 3.0,
-          "style": "Hidden"
-        },
         "window": {
           "visible": true
         }
       }
     }
   },
-  "NetworkTables": {
-    "transitory": {
-      "SmartDashboard": {
-        "open": true,
-        "swerve": {
-          "open": true
+  "Plot": {
+    "Plot <0>": {
+      "plots": [
+        {
+          "height": 332
         }
+      ],
+      "window": {
+        "visible": false
       }
     }
   }

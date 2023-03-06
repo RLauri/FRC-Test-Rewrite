@@ -5,6 +5,8 @@
 package frc.robot;
 
 import com.pathplanner.lib.server.PathPlannerServer;
+import com.revrobotics.REVPhysicsSim;
+
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
@@ -130,6 +132,8 @@ public class Robot extends TimedRobot
     }
     m_robotContainer.setDriveMode();
     m_robotContainer.setMotorBrake(true);
+    //seems like you only want this limiter for a few frames, helps smooth transitions 
+    m_robotContainer.setSlewRates(20, 20, 20);
   }
 
   /**
