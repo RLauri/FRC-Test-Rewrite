@@ -245,7 +245,6 @@ public class SwerveSubsystem extends SubsystemBase
 
   /**
    * Lock the swerve drive to prevent it from moving.
-   * TODO: add binding
    */
   public void lock()
   {

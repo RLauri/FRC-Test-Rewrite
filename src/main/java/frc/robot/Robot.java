@@ -5,8 +5,9 @@
 package frc.robot;
 
 import com.pathplanner.lib.server.PathPlannerServer;
-import com.revrobotics.REVPhysicsSim;
-
+import edu.wpi.first.wpilibj.PowerDistribution;
+import edu.wpi.first.wpilibj.PowerDistribution.ModuleType;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Filesystem;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
@@ -30,6 +31,8 @@ public class Robot extends TimedRobot
   private RobotContainer m_robotContainer;
 
   private Timer disabledTimer;
+
+  // PowerDistribution m_pdh = new PowerDistribution(Constants.IDs.PDH_CAN_ID, ModuleType.kRev);
 
   public Robot()
   {
@@ -63,6 +66,8 @@ public class Robot extends TimedRobot
    *
    * <p>This runs after the mode specific periodic functions, but before LiveWindow and
    * SmartDashboard integrated updating.
+   * 
+   * TODO: Add Rev PDH diagnostics
    */
   @Override
   public void robotPeriodic()
@@ -72,6 +77,10 @@ public class Robot extends TimedRobot
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
+
+    // TODO: uncomment once id is set
+    // SmartDashboard.putNumber("Voltage", m_pdh.getVoltage());
+    // SmartDashboard.putNumber("Total Current", m_pdh.getTotalCurrent());
   }
 
   /**
