@@ -32,8 +32,9 @@ public final class Constants
     public static final PIDFConfig yAutoPID     = new PIDFConfig(0.7, 0, 0);
     public static final PIDFConfig angleAutoPID = new PIDFConfig(0.4, 0, 0.01);
 
-    public static final double MAX_SPEED        = 14.5;
-    public static final double MAX_ACCELERATION = 10;
+    // these values appear to be no longer used, max acceleration is calculated using wheel grip coeff and speed is set in jsons
+    // public static final double MAX_SPEED        = 14.5;
+    // public static final double MAX_ACCELERATION = 10;
   }
 
   public static final class Drivebase
@@ -47,7 +48,8 @@ public final class Constants
   {
 
     // Joystick Deadband
-    public static final double LEFT_X_DEADBAND = 0.01;
-    public static final double LEFT_Y_DEADBAND = 0.01;
+    // set to Ryan's 10 year old joystick values 
+    public static final double LEFT_X_DEADBAND = 0.05;
+    public static final double LEFT_Y_DEADBAND = 0.05;
   }
 }
